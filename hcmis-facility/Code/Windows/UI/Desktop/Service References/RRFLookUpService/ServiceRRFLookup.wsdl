@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceRRFLookup" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://213.55.76.188:40301/Order/ServiceRRFLookup.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://213.55.76.188:40301/Order/ServiceRRFLookup.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLITS.Entities" />
+      <xsd:import schemaLocation="http://213.55.76.188:40301/Order/ServiceRRFLookup.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceRRFLookup_GetForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForms" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetForms_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q1:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetCurrentReportingPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentReportingPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetCurrentReportingPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentReportingPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetCurrentReportingPeriod_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q2:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentReasons" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentReasons_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q3:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetAdjustmentTypes_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q4:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetStockOutReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockOutReasons" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetStockOutReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockOutReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetStockOutReasons_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q5:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetRRFTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRRFTypes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetRRFTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRRFTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetRRFTypes_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q6:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetFacilityRRForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityRRForm" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetFacilityRRForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityRRFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetFacilityRRForm_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q7:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetBranchRRForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchRRForm" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetBranchRRForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchRRFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceRRFLookup_GetBranchRRForm_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q8:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceRRFLookup">
+    <wsdl:operation name="GetForms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetForms" message="tns:IServiceRRFLookup_GetForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetFormsResponse" message="tns:IServiceRRFLookup_GetForms_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetFormsPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetForms_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentReportingPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetCurrentReportingPeriod" message="tns:IServiceRRFLookup_GetCurrentReportingPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetCurrentReportingPeriodResponse" message="tns:IServiceRRFLookup_GetCurrentReportingPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetCurrentReportingPeriodPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetCurrentReportingPeriod_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentReasons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentReasons" message="tns:IServiceRRFLookup_GetAdjustmentReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentReasonsResponse" message="tns:IServiceRRFLookup_GetAdjustmentReasons_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentReasonsPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetAdjustmentReasons_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentTypes" message="tns:IServiceRRFLookup_GetAdjustmentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentTypesResponse" message="tns:IServiceRRFLookup_GetAdjustmentTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetAdjustmentTypesPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetAdjustmentTypes_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockOutReasons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetStockOutReasons" message="tns:IServiceRRFLookup_GetStockOutReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetStockOutReasonsResponse" message="tns:IServiceRRFLookup_GetStockOutReasons_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetStockOutReasonsPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetStockOutReasons_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRRFTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetRRFTypes" message="tns:IServiceRRFLookup_GetRRFTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetRRFTypesResponse" message="tns:IServiceRRFLookup_GetRRFTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetRRFTypesPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetRRFTypes_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityRRForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetFacilityRRForm" message="tns:IServiceRRFLookup_GetFacilityRRForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetFacilityRRFormResponse" message="tns:IServiceRRFLookup_GetFacilityRRForm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetFacilityRRFormPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetFacilityRRForm_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchRRForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetBranchRRForm" message="tns:IServiceRRFLookup_GetBranchRRForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetBranchRRFormResponse" message="tns:IServiceRRFLookup_GetBranchRRForm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceRRFLookup/GetBranchRRFormPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceRRFLookup_GetBranchRRForm_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceRRFLookup" type="tns:IServiceRRFLookup">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetForms">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentReportingPeriod">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetCurrentReportingPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentReasons">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetAdjustmentReasons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentTypes">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetAdjustmentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockOutReasons">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetStockOutReasons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRRFTypes">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetRRFTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityRRForm">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetFacilityRRForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchRRForm">
+      <soap:operation soapAction="http://tempuri.org/IServiceRRFLookup/GetBranchRRForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceRRFLookup">
+    <wsdl:port name="BasicHttpBinding_IServiceRRFLookup" binding="tns:BasicHttpBinding_IServiceRRFLookup">
+      <soap:address location="http://213.55.76.188:40301/Order/ServiceRRFLookup.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

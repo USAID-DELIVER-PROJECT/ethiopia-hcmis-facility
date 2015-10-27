@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PLITS.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PLITS.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFormMeta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FormMeta" nillable="true" type="tns:FormMeta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFormMeta" nillable="true" type="tns:ArrayOfFormMeta" />
+  <xs:complexType name="FormMeta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsFormComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormMeta" nillable="true" type="tns:FormMeta" />
+  <xs:complexType name="PLITSFaultException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorcode" type="tns:PLITSFaultCode" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PLITSFaultException" nillable="true" type="tns:PLITSFaultException" />
+  <xs:simpleType name="PLITSFaultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OPERATION_ERROR" />
+      <xs:enumeration value="SECURITY_ERROR" />
+      <xs:enumeration value="INCORRECT_PARAMETER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PLITSFaultCode" nillable="true" type="tns:PLITSFaultCode" />
+  <xs:complexType name="ArrayOfRRReportingPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RRReportingPeriod" nillable="true" type="tns:RRReportingPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRRReportingPeriod" nillable="true" type="tns:ArrayOfRRReportingPeriod" />
+  <xs:complexType name="RRReportingPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRefillDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RRReportingPeriod" nillable="true" type="tns:RRReportingPeriod" />
+  <xs:complexType name="ArrayOfAdjustmentReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustmentReason" nillable="true" type="tns:AdjustmentReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustmentReason" nillable="true" type="tns:ArrayOfAdjustmentReason" />
+  <xs:complexType name="AdjustmentReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustmentReason" nillable="true" type="tns:AdjustmentReason" />
+  <xs:complexType name="ArrayOfAdjustmentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustmentType" nillable="true" type="tns:AdjustmentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustmentType" nillable="true" type="tns:ArrayOfAdjustmentType" />
+  <xs:complexType name="AdjustmentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustmentType" nillable="true" type="tns:AdjustmentType" />
+  <xs:complexType name="ArrayOfStockOutReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockOutReason" nillable="true" type="tns:StockOutReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockOutReason" nillable="true" type="tns:ArrayOfStockOutReason" />
+  <xs:complexType name="StockOutReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockOutReason" nillable="true" type="tns:StockOutReason" />
+  <xs:complexType name="ArrayOfRRFType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RRFType" nillable="true" type="tns:RRFType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRRFType" nillable="true" type="tns:ArrayOfRRFType" />
+  <xs:complexType name="RRFType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RRFType" nillable="true" type="tns:RRFType" />
+  <xs:complexType name="ArrayOfRRForm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RRForm" nillable="true" type="tns:RRForm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRRForm" nillable="true" type="tns:ArrayOfRRForm" />
+  <xs:complexType name="RRForm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormCategories" nillable="true" type="tns:ArrayOfRRFormCategory" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsFormComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RRForm" nillable="true" type="tns:RRForm" />
+  <xs:complexType name="ArrayOfRRFormCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RRFormCategory" nillable="true" type="tns:RRFormCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRRFormCategory" nillable="true" type="tns:ArrayOfRRFormCategory" />
+  <xs:complexType name="RRFormCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pharmaceuticals" nillable="true" type="tns:ArrayOfRRFormPharmaceutical" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RRFormCategory" nillable="true" type="tns:RRFormCategory" />
+  <xs:complexType name="ArrayOfRRFormPharmaceutical">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RRFormPharmaceutical" nillable="true" type="tns:RRFormPharmaceutical" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRRFormPharmaceutical" nillable="true" type="tns:ArrayOfRRFormPharmaceutical" />
+  <xs:complexType name="RRFormPharmaceutical">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginningBalance" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmaceuticalId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RRFormPharmaceutical" nillable="true" type="tns:RRFormPharmaceutical" />
+</xs:schema>

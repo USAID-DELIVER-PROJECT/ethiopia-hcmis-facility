@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://hcmis.org/registrations/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://hcmis.org/registrations/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://hcmis.org/registrations/">
+      <s:element name="RegisterNewUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userTypeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="installedVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterNewUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterNewUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSoftwareVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSoftwareVersionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateNewAuthenticationCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="addedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewAuthenticationCodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRegisteredUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegisteredUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegisteredUsersResult" type="tns:ArrayOfRegisteredUsers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRegisteredUsers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RegisteredUsers" nillable="true" type="tns:RegisteredUsers" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RegisteredUsers">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserTypeID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoftwareID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InstalledVersion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastContacted" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastContactedDaysAgo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthenticationID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Discontinued" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastIssueDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastReceiveDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmitAdditionalInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userTypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionaDataName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalDataValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransmitAdditionalInformationResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterNewUserSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterNewUser" />
+  </wsdl:message>
+  <wsdl:message name="RegisterNewUserSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoftwareVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSoftwareVersion" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoftwareVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSoftwareVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewAuthenticationCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewAuthenticationCode" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewAuthenticationCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewAuthenticationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisteredUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegisteredUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisteredUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegisteredUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransmitAdditionalInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:TransmitAdditionalInformation" />
+  </wsdl:message>
+  <wsdl:message name="TransmitAdditionalInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:TransmitAdditionalInformationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RegistrationsSoap">
+    <wsdl:operation name="RegisterNewUser">
+      <wsdl:input message="tns:RegisterNewUserSoapIn" />
+      <wsdl:output message="tns:RegisterNewUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftwareVersion">
+      <wsdl:input message="tns:UpdateSoftwareVersionSoapIn" />
+      <wsdl:output message="tns:UpdateSoftwareVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewAuthenticationCode">
+      <wsdl:input message="tns:CreateNewAuthenticationCodeSoapIn" />
+      <wsdl:output message="tns:CreateNewAuthenticationCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredUsers">
+      <wsdl:input message="tns:GetRegisteredUsersSoapIn" />
+      <wsdl:output message="tns:GetRegisteredUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransmitAdditionalInformation">
+      <wsdl:input message="tns:TransmitAdditionalInformationSoapIn" />
+      <wsdl:output message="tns:TransmitAdditionalInformationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegistrationsSoap" type="tns:RegistrationsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUser">
+      <soap:operation soapAction="http://hcmis.org/registrations/RegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftwareVersion">
+      <soap:operation soapAction="http://hcmis.org/registrations/UpdateSoftwareVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewAuthenticationCode">
+      <soap:operation soapAction="http://hcmis.org/registrations/CreateNewAuthenticationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredUsers">
+      <soap:operation soapAction="http://hcmis.org/registrations/GetRegisteredUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmitAdditionalInformation">
+      <soap:operation soapAction="http://hcmis.org/registrations/TransmitAdditionalInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RegistrationsSoap12" type="tns:RegistrationsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUser">
+      <soap12:operation soapAction="http://hcmis.org/registrations/RegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftwareVersion">
+      <soap12:operation soapAction="http://hcmis.org/registrations/UpdateSoftwareVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewAuthenticationCode">
+      <soap12:operation soapAction="http://hcmis.org/registrations/CreateNewAuthenticationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredUsers">
+      <soap12:operation soapAction="http://hcmis.org/registrations/GetRegisteredUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmitAdditionalInformation">
+      <soap12:operation soapAction="http://hcmis.org/registrations/TransmitAdditionalInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Registrations">
+    <wsdl:port name="RegistrationsSoap" binding="tns:RegistrationsSoap">
+      <soap:address location="http://registrations.hcmis.org/Registrations.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RegistrationsSoap12" binding="tns:RegistrationsSoap12">
+      <soap12:address location="http://registrations.hcmis.org/Registrations.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

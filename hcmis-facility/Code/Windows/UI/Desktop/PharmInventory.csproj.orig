@@ -1,0 +1,1421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80BE69F5-6B84-4235-B9AC-20ECC8C5B9A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PharmInventory</RootNamespace>
+    <AssemblyName>HCMIS</AssemblyName>
+    <StartupObject>PharmInventory.Program</StartupObject>
+    <ManifestCertificateThumbprint>12F722CD5401FCF005991B13D41002CAA51D6B53</ManifestCertificateThumbprint>
+    <ManifestKeyFile>PharmInventory_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>C:\STORAGE\Dropbox\FE Labs\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://fe.hcmisonline.org/labs/</UpdateUrl>
+    <ProductName>HCMIS Facility Edition</ProductName>
+    <PublisherName>USAID DELIVER PROJECT</PublisherName>
+    <MinimumRequiredVersion>2.5.0.204</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Default.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>204</ApplicationRevision>
+    <ApplicationVersion>2.5.0.204</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Itanium'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Itanium\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HCMIS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Itanium'">
+    <OutputPath>bin\Itanium\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\HCMIS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CalendarLib">
+      <HintPath>Common DLLs\CalendarLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2.UI">
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.Wizard, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.UI, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2.UI , Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v12.2.Service, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2.Extensions, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EthiopianDate">
+      <HintPath>Common DLLs\EthiopianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="MyGeneration.dOOdads">
+      <HintPath>Common DLLs\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PrintableListView">
+      <HintPath>Common DLLs\PrintableListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Legacy\ECLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Legacy\ECLS.designer.cs">
+      <DependentUpon>ECLS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\Aboutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\Aboutus.Designer.cs">
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\AddSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\AddSupply.designer.cs">
+      <DependentUpon>AddSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\EditIssueDocRefrenceNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\EditIssueDocRefrenceNo.Designer.cs">
+      <DependentUpon>EditIssueDocRefrenceNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\EditLossAndAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\EditLossAndAdjustment.Designer.cs">
+      <DependentUpon>EditLossAndAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\EditRecieveRefrenceNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\EditRecieveRefrenceNo.Designer.cs">
+      <DependentUpon>EditRecieveRefrenceNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\ManageSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\ManageSupplies.Designer.cs">
+      <DependentUpon>ManageSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\ManageItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\ManageItems.Designer.cs">
+      <DependentUpon>ManageItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\BalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\BalanceReport.Designer.cs">
+      <DependentUpon>BalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionByUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionByUnits.Designer.cs">
+      <DependentUpon>ConsumptionByUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionTrendReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionTrendReport.Designer.cs">
+      <DependentUpon>ConsumptionTrendReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\CostReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\CostReport.Designer.cs">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ExpiredProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ExpiredProducts.Designer.cs">
+      <DependentUpon>ExpiredProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ExpiredProductsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ExpiredProductsReport.Designer.cs">
+      <DependentUpon>ExpiredProductsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ItemReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ItemReport.Designer.cs">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\NearlyExpired.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\NearlyExpired.Designer.cs">
+      <DependentUpon>NearlyExpired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\OtherItemReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\OtherItemReport.Designer.cs">
+      <DependentUpon>OtherItemReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\RRFForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\RRFForm.Designer.cs">
+      <DependentUpon>RRFForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\AMCView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\AMCView.Designer.cs">
+      <DependentUpon>AMCView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\StockOutIndicesBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\StockOutIndicesBuilder.Designer.cs">
+      <DependentUpon>StockOutIndicesBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\AutoBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\AutoBackup.designer.cs">
+      <DependentUpon>AutoBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Legacy\Calc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Legacy\Calc.Designer.cs">
+      <DependentUpon>Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Legacy\CalenderColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\DatabaseCleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\DatabaseCleaning.Designer.cs">
+      <DependentUpon>DatabaseCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UtilitiesAndForms\Registrations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UtilitiesAndForms\Registrations.Designer.cs">
+      <DependentUpon>Registrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\Cell.cs" />
+    <Compile Include="Forms\UtilitiesAndForms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UtilitiesAndForms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Legacy\ConsumptionTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Legacy\ConsumptionTrend.Designer.cs">
+      <DependentUpon>ConsumptionTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\ConvertDate.cs" />
+    <Compile Include="HelperClasses\DirectoryServices.cs" />
+    <Compile Include="Forms\ActivityLogs\LogPickList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogPickList.Designer.cs">
+      <DependentUpon>LogPickList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\DatabaseHelpers.cs" />
+    <Compile Include="HelperClasses\EthCal.cs" />
+    <Compile Include="Forms\Transactions\LossesAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\LossesAdjustment.Designer.cs">
+      <DependentUpon>LossesAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\MainWindowController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperClasses\RegistrationHelper.cs" />
+    <Compile Include="HelperClasses\SchemaHelpers.cs" />
+    <Compile Include="HelperClasses\UpdateManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="Scripts\01_HCMIS Queries.sql" />
+    <Content Include="Scripts\03_GetConsumptionTrendByMonth.sql" />
+    <Content Include="Scripts\04_GetMonthlyConsumptionByUnits.sql" />
+    <Content Include="Scripts\06_SupplyCategory_ID_AutoNumberRemove.sql" />
+    <Content Include="Scripts\27_SOHUpdated.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\17_DisposalDelete.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Service References\DirectoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HCMISRegistrations\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RRFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Legend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Legend.designer.cs">
+      <DependentUpon>Legend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogInventory.Designer.cs">
+      <DependentUpon>LogInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralCostChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralCostChart.designer.cs">
+      <DependentUpon>GeneralCostChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralExpiryChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralExpiryChart.designer.cs">
+      <DependentUpon>GeneralExpiryChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\ListViewItemComparer.cs" />
+    <Compile Include="Reports\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RRFReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RRFReport.Designer.cs">
+      <DependentUpon>RRFReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\EditIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\EditIssue.Designer.cs">
+      <DependentUpon>EditIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\EditReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\EditReceive.Designer.cs">
+      <DependentUpon>EditReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralChart.Designer.cs">
+      <DependentUpon>GeneralChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\Grid.cs" />
+    <Compile Include="HelperClasses\Header.cs" />
+    <Compile Include="Forms\Modals\ItemDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\ItemDetailReport.designer.cs">
+      <DependentUpon>ItemDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummaryReports\GeneralReport.Designer.cs">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\PrinterClass.cs" />
+    <Compile Include="Forms\Trends\SOHTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trends\SOHTrend.Designer.cs">
+      <DependentUpon>SOHTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogAdjustment.Designer.cs">
+      <DependentUpon>LogAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogIssues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogIssues.Designer.cs">
+      <DependentUpon>LogIssues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityLogs\LogReceive.Designer.cs">
+      <DependentUpon>LogReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trends\ReceiveTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trends\ReceiveTrend.Designer.cs">
+      <DependentUpon>ReceiveTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Legacy\IssuesByDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Legacy\IssuesByDep.Designer.cs">
+      <DependentUpon>IssuesByDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\ItemPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\ItemPolicy.Designer.cs">
+      <DependentUpon>ItemPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\CustomDrugList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\CustomDrugList.Designer.cs">
+      <DependentUpon>CustomDrugList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UtilitiesAndForms\DatabaseActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UtilitiesAndForms\DatabaseActions.Designer.cs">
+      <DependentUpon>DatabaseActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\IssueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\IssueForm.Designer.cs">
+      <DependentUpon>IssueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\Hospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\Hospital.Designer.cs">
+      <DependentUpon>Hospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\HospitalSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\HospitalSettings.Designer.cs">
+      <DependentUpon>HospitalSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modals\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modals\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\Pipeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\Pipeline.Designer.cs">
+      <DependentUpon>Pipeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AMCViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModelCollection.cs" />
+    <Content Include="Scripts\28_SOHByPrograms.sql" />
+    <Content Include="Scripts\30_vwGetReceivedItemsBatchNo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\31_AllProdsNov20.sql" />
+    <Content Include="Scripts\33_disposalinsert.sql" />
+    <Content Include="Scripts\32_altedisposal.sql" />
+    <Content Include="Scripts\34_IssueDocDeleted.sql" />
+    <Content Include="Scripts\35_IssueDocDeletedInsert.sql" />
+    <Content Include="Scripts\36_alterunit.sql" />
+    <Content Include="Scripts\37_GetReceivedItems.sql" />
+    <Content Include="Scripts\38_NeedExpiryBatchForPahramaceuticals.sql" />
+    <Content Include="Scripts\39_SetNeedExpiryBatchForSupplies.sql" />
+    <Content Include="Scripts\40_ItemUnit.sql" />
+    <Content Include="Scripts\42_CreateItemUnitInsert.sql" />
+    <Content Include="Scripts\43_CreateItemUnitLoadAll.sql" />
+    <Content Include="Scripts\44_CreateItemUnitLoadByPrimayKey.sql" />
+    <Content Include="Scripts\45_AlterReceiveDoc.sql" />
+    <Content Include="Scripts\46_ReceiveDocInsert.sql" />
+    <Content Include="Scripts\47_ReceiveDocUpdate.sql" />
+    <Content Include="Scripts\48_ReceiveDocLoadAll.sql" />
+    <Content Include="Scripts\49_DeleteWoredaForeignKey.sql" />
+    <Content Include="Scripts\50_alterWoreda.sql" />
+    <Content Include="Scripts\51_AddColumnsToReceivingUnits.sql" />
+    <Content Include="Scripts\52_ReceivingUnitInsert.sql" />
+    <Content Include="Scripts\53_ReceivingUnitUpdate.sql" />
+    <Content Include="Scripts\54_ReceivingUnitLoadByPrimaryKey.sql" />
+    <Content Include="Scripts\55_ReceivingUnitLoadAll.sql" />
+    <Content Include="XMLFile1.xml" />
+    <EmbeddedResource Include="Forms\Legacy\ECLS.resx">
+      <DependentUpon>ECLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\Aboutus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\AddItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\AddSupply.resx">
+      <DependentUpon>AddSupply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\EditIssueDocRefrenceNo.resx">
+      <DependentUpon>EditIssueDocRefrenceNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\EditLossAndAdjustment.resx">
+      <DependentUpon>EditLossAndAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\EditRecieveRefrenceNo.resx">
+      <DependentUpon>EditRecieveRefrenceNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\ManageSupplies.resx">
+      <DependentUpon>ManageSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\ManageItems.resx">
+      <DependentUpon>ManageItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\BalanceReport.resx">
+      <DependentUpon>BalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsumptionByUnits.resx">
+      <DependentUpon>ConsumptionByUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsumptionTrendReport.resx">
+      <DependentUpon>ConsumptionTrendReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\CostReport.resx">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ExpiredProducts.resx">
+      <DependentUpon>ExpiredProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ExpiredProductsReport.resx">
+      <DependentUpon>ExpiredProductsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ItemReport.resx">
+      <DependentUpon>ItemReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\NearlyExpired.resx">
+      <DependentUpon>NearlyExpired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\OtherItemReport.resx">
+      <DependentUpon>OtherItemReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\RRFForm.resx">
+      <DependentUpon>RRFForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\AMCView.resx">
+      <DependentUpon>AMCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\StockOutIndicesBuilder.resx">
+      <DependentUpon>StockOutIndicesBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\AutoBackup.resx">
+      <DependentUpon>AutoBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Legacy\Calc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\DatabaseCleaning.resx">
+      <DependentUpon>DatabaseCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UtilitiesAndForms\ChangePassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Legacy\ConsumptionTrend.resx">
+      <DependentUpon>ConsumptionTrend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityLogs\LogPickList.resx">
+      <DependentUpon>LogPickList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\LossesAdjustment.resx">
+      <DependentUpon>LossesAdjustment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UtilitiesAndForms\Registrations.resx">
+      <DependentUpon>Registrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserControls\Legend.resx">
+      <DependentUpon>Legend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityLogs\LogInventory.resx">
+      <DependentUpon>LogInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryReports\GeneralCostChart.resx">
+      <DependentUpon>GeneralCostChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryReports\GeneralExpiryChart.resx">
+      <DependentUpon>GeneralExpiryChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RRFReport.resx">
+      <DependentUpon>RRFReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\EditIssue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\EditReceive.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryReports\GeneralChart.resx">
+      <DependentUpon>GeneralChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\ItemDetailReport.resx">
+      <DependentUpon>ItemDetailReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummaryReports\GeneralReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trends\SOHTrend.resx">
+      <DependentUpon>SOHTrend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityLogs\LogAdjustment.resx">
+      <DependentUpon>LogAdjustment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityLogs\LogIssues.resx">
+      <DependentUpon>LogIssues.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityLogs\LogReceive.resx">
+      <DependentUpon>LogReceive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trends\ReceiveTrend.resx">
+      <DependentUpon>ReceiveTrend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Legacy\IssuesByDep.resx">
+      <DependentUpon>IssuesByDep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\ItemPolicy.resx">
+      <DependentUpon>ItemPolicy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\CustomDrugList.resx">
+      <DependentUpon>CustomDrugList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UtilitiesAndForms\DatabaseActions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\IssueForm.resx">
+      <DependentUpon>IssueForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\Hospital.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Hospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\HospitalSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modals\LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\Pipeline.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Pipeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\ReceiveingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceiveingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\SystemSetting.resx">
+      <DependentUpon>SystemSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\ConnectionStringGenerator.resx">
+      <DependentUpon>ConnectionStringGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profiles\UserAccounts.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\YearEndProcess.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YearEndProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmInventory_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\BLL.ItemUnit.datasource" />
+    <None Include="Properties\DataSources\IndexBuilder.ViewModels.ItemViewModel.datasource" />
+    <None Include="Properties\DataSources\PharmInventory.ViewModel.ItemViewModel.datasource" />
+    <None Include="Properties\DataSources\PharmInventory.ViewModels.AMCViewModel.datasource" />
+    <None Include="Properties\DataSources\PharmInventory.ViewModels.ItemViewModel.datasource" />
+    <None Include="Properties\DataSources\StockoutIndexBuilder.Models.AmcReport.datasource" />
+    <None Include="Properties\DataSources\StockoutIndexBuilder.Models.Store.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\Transactions\ReceiveingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\ReceiveingForm.Designer.cs">
+      <DependentUpon>ReceiveingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\SystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\SystemSetting.Designer.cs">
+      <DependentUpon>SystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\ConnectionStringGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\ConnectionStringGenerator.Designer.cs">
+      <DependentUpon>ConnectionStringGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profiles\UserAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profiles\UserAccounts.Designer.cs">
+      <DependentUpon>UserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\YearEndProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\YearEndProcess.Designer.cs">
+      <DependentUpon>YearEndProcess.cs</DependentUpon>
+    </Compile>
+    <None Include="Reports\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ABC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ArrayOfItemUnit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.CommodityType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.DosageForm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.DrugCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.DrugItemSubCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.DrugSubCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ItemAccessories.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ItemManufacturer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ItemProgram.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Items.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ItemSupplyCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ItemUnitWithUnitDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Manufacturer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Program.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.ReportTypes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.StorageType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.StoreItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Stores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.StoreType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.SubAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.SubSubAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.SupplyCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Unit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.Units.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\PharmInventory.DirectoryService.VEN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DirectoryService\Service1.wsdl" />
+    <None Include="Service References\HCMISRegistrations\PharmInventory.HCMISRegistrations.RegisteredUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HCMISRegistrations\Registrations.wsdl" />
+    <None Include="Service References\RRFService\PharmInventory.RRFService.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RRFService\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4D833455-E466-4E4F-AD03-352C114711E1}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectionStringManager\ConnectionStringManager.csproj">
+      <Project>{69805B41-7B24-48D7-9A7A-F6018F4A6087}</Project>
+      <Name>ConnectionStringManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{2B12B6DD-2142-492F-A990-78F5EB3F840A}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockoutIndexBuilder.cs\StockoutIndexBuilder.csproj">
+      <Project>{9AA5EB03-5F0A-4C22-A474-EF289057B3C5}</Project>
+      <Name>StockoutIndexBuilder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systeminfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antivirus -64px.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_green_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_accept.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blinklist_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_green_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridRowHeight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridFixedBands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridLayouts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridDataSummaries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridValidation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBarNavigationPane.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_content_pencil_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_chart_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_content_pencil_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper&amp;pencil_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-48-plugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\16_AmcReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\15_ItemsTableOptionalUnit2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\18_DisposalDeleteInsert.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\19_ALTER TABLE Items.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\20_DisposalDeleteLoadByPrimaryKey.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\22_IssueDocDeletedLoadAll.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\23_IssueDocDeletedLoadByPrimaryKey.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\24_ReceiveDocDeleted.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\25_ReceiveDocDeletedInsert.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\26_ReceiveDocDeletedLoadAll.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\29_Stockout.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ConnectionStringManager.dll" />
+    <Content Include="Scripts\11_vwGetAllItems.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\12_rpt_BinCard.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\13_EnableEthiopianDate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\14_ItemsTableOptionalUnitID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\DirectoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DirectoryService\configuration.svcinfo" />
+    <None Include="Service References\DirectoryService\configuration91.svcinfo" />
+    <None Include="Service References\DirectoryService\Service1.disco" />
+    <None Include="Resources\Excel.gif" />
+    <Content Include="Scripts\05_AltervwGetAllItems.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\07_SupplyCategory_StoredProcs.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\08_Type_IDModification.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\09_Type_StoredProcs.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\10_SOH_TypeIDAddition.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\HCMISRegistrations\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HCMISRegistrations\configuration.svcinfo" />
+    <None Include="Service References\HCMISRegistrations\configuration91.svcinfo" />
+    <None Include="Service References\HCMISRegistrations\Registrations.disco" />
+    <None Include="Service References\RRFService\Service.disco" />
+    <None Include="Service References\RRFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RRFService\configuration.svcinfo" />
+    <None Include="Service References\RRFService\configuration91.svcinfo" />
+    <None Include="Resources\usb_48.png" />
+    <None Include="Resources\1286957665_File Receive.png" />
+    <None Include="Resources\1286957727_issue.png" />
+    <None Include="Resources\1286958752_issue.png" />
+    <None Include="Resources\1286968437_kthememgr.png" />
+    <None Include="Resources\1287387920_stock_summary.png" />
+    <None Include="Resources\1287389508_stock_task-assigned-to.png" />
+    <None Include="Resources\1287389564_Box Out.png" />
+    <None Include="Resources\1287389366_pie_chart.png" />
+    <None Include="Resources\1287389359_pie_chart.png" />
+    <None Include="Resources\1287390117_chart_curve.png" />
+    <None Include="Resources\1287390603_text-enriched.png" />
+    <None Include="Resources\1287390598_list-error.png" />
+    <None Include="Resources\1287390769_toggle_log.png" />
+    <None Include="Resources\1287390819_diagram-02.png" />
+    <None Include="Resources\1287716487_wheel.png" />
+    <None Include="Resources\1287716472_Hospital.png" />
+    <None Include="Resources\1287716461_pipe.png" />
+    <None Include="Resources\1287716655_cog_edit.png" />
+    <None Include="Resources\1287716501_database_save.png" />
+    <None Include="Resources\150-1.ico" />
+    <Content Include="Icon.ico" />
+    <Content Include="Resources\3d bar chart.gif" />
+    <Content Include="Resources\3d bar chart1.gif" />
+    <None Include="Resources\Blue cube3.gif" />
+    <None Include="Resources\bundle_024.gif" />
+    <Content Include="Resources\Burn table1.gif" />
+    <None Include="Resources\Burn table3.gif" />
+    <Content Include="Resources\Database.gif" />
+    <None Include="Resources\Help.gif" />
+    <None Include="Resources\expired.png" />
+    <None Include="Resources\Near-Expiry.png" />
+    <None Include="Resources\LoginScreenFacilityEdition7.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\Loading1.gif" />
+    <Content Include="Resources\New database.gif" />
+    <None Include="Resources\New database1.gif" />
+    <None Include="Resources\New database2.gif" />
+    <None Include="Resources\usaid_deliver21.gif" />
+    <None Include="Resources\sup.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\tick-circle.png" />
+    <None Include="Resources\tick-circle-frame.png" />
+    <None Include="Resources\ticket.png" />
+    <None Include="Resources\ticket-small.png" />
+    <None Include="Resources\ticket-stub.png" />
+    <None Include="Resources\tick-shield.png" />
+    <None Include="Resources\tick-small.png" />
+    <None Include="Resources\tick-small-circle.png" />
+    <None Include="Resources\toggle.png" />
+    <None Include="Resources\toggle-expand.png" />
+    <None Include="Resources\toggle-small.png" />
+    <None Include="Resources\toggle-small-expand.png" />
+    <None Include="Resources\trophy.png" />
+    <None Include="Resources\trophy-bronze.png" />
+    <None Include="Resources\trophy-silver.png" />
+    <None Include="Resources\ui-button-toggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DirectoryService\" />
+    <WCFMetadataStorage Include="Service References\HCMISRegistrations\" />
+    <WCFMetadataStorage Include="Service References\RRFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.OfficeSkins.v12.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v12.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

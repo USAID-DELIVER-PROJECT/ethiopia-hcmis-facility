@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceOrder" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLITS.Entities" />
+      <xsd:import schemaLocation="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceOrder_SubmitFacilityOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFacilityOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitFacilityOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFacilityOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitFacilityOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q1:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrdersCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityApprovedOrdersCount" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrdersCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityApprovedOrdersCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrdersCount_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q2:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityApprovedOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacilityApprovedOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetFacilityApprovedOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q3:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmFacilityApprovedOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmFacilityApprovedOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmFacilityApprovedOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmFacilityApprovedOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmFacilityApprovedOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q4:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitFacilityIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFacilityIssues" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitFacilityIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitFacilityIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitFacilityIssues_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q5:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBranchOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBranchOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q6:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrdersCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchApprovedOrdersCount" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrdersCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchApprovedOrdersCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrdersCount_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q7:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchApprovedOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchApprovedOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_GetBranchApprovedOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q8:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmBranchApprovedOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmBranchApprovedOrders" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmBranchApprovedOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmBranchApprovedOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_ConfirmBranchApprovedOrders_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q9:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBranchIssues" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBranchIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceOrder_SubmitBranchIssues_PLITSFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/PLITS.Entities" name="detail" element="q10:PLITSFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceOrder">
+    <wsdl:operation name="SubmitFacilityOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityOrders" message="tns:IServiceOrder_SubmitFacilityOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityOrdersResponse" message="tns:IServiceOrder_SubmitFacilityOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_SubmitFacilityOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityApprovedOrdersCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersCount" message="tns:IServiceOrder_GetFacilityApprovedOrdersCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersCountResponse" message="tns:IServiceOrder_GetFacilityApprovedOrdersCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersCountPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_GetFacilityApprovedOrdersCount_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityApprovedOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrders" message="tns:IServiceOrder_GetFacilityApprovedOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersResponse" message="tns:IServiceOrder_GetFacilityApprovedOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_GetFacilityApprovedOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFacilityApprovedOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmFacilityApprovedOrders" message="tns:IServiceOrder_ConfirmFacilityApprovedOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmFacilityApprovedOrdersResponse" message="tns:IServiceOrder_ConfirmFacilityApprovedOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmFacilityApprovedOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_ConfirmFacilityApprovedOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFacilityIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityIssues" message="tns:IServiceOrder_SubmitFacilityIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityIssuesResponse" message="tns:IServiceOrder_SubmitFacilityIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/SubmitFacilityIssuesPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_SubmitFacilityIssues_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBranchOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchOrders" message="tns:IServiceOrder_SubmitBranchOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchOrdersResponse" message="tns:IServiceOrder_SubmitBranchOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_SubmitBranchOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchApprovedOrdersCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersCount" message="tns:IServiceOrder_GetBranchApprovedOrdersCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersCountResponse" message="tns:IServiceOrder_GetBranchApprovedOrdersCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersCountPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_GetBranchApprovedOrdersCount_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchApprovedOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrders" message="tns:IServiceOrder_GetBranchApprovedOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersResponse" message="tns:IServiceOrder_GetBranchApprovedOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_GetBranchApprovedOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBranchApprovedOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmBranchApprovedOrders" message="tns:IServiceOrder_ConfirmBranchApprovedOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmBranchApprovedOrdersResponse" message="tns:IServiceOrder_ConfirmBranchApprovedOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/ConfirmBranchApprovedOrdersPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_ConfirmBranchApprovedOrders_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBranchIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchIssues" message="tns:IServiceOrder_SubmitBranchIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchIssuesResponse" message="tns:IServiceOrder_SubmitBranchIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceOrder/SubmitBranchIssuesPLITSFaultExceptionFault" name="PLITSFaultExceptionFault" message="tns:IServiceOrder_SubmitBranchIssues_PLITSFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceOrder" type="tns:IServiceOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitFacilityOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/SubmitFacilityOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityApprovedOrdersCount">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrdersCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacilityApprovedOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/GetFacilityApprovedOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFacilityApprovedOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/ConfirmFacilityApprovedOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFacilityIssues">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/SubmitFacilityIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBranchOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/SubmitBranchOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchApprovedOrdersCount">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/GetBranchApprovedOrdersCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchApprovedOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/GetBranchApprovedOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBranchApprovedOrders">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/ConfirmBranchApprovedOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBranchIssues">
+      <soap:operation soapAction="http://tempuri.org/IServiceOrder/SubmitBranchIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PLITSFaultExceptionFault">
+        <soap:fault use="literal" name="PLITSFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceOrder">
+    <wsdl:port name="BasicHttpBinding_IServiceOrder" binding="tns:BasicHttpBinding_IServiceOrder">
+      <soap:address location="http://213.55.76.188/TestServices/Order/ServiceOrder.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

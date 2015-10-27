@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PLITS.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PLITS.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderApprovedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCompletedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDetails" nillable="true" type="tns:ArrayOfOrderDetail" />
+      <xs:element minOccurs="0" name="OrderStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderVerifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportingPeriodId" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestApprovedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RequestCompletedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RequestVerifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SubmittedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmittedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SupplyChainUnitId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="ArrayOfOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDetail" nillable="true" type="tns:OrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderDetail" nillable="true" type="tns:ArrayOfOrderDetail" />
+  <xs:complexType name="OrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adjustments" nillable="true" type="tns:ArrayOfAdjustment" />
+      <xs:element minOccurs="0" name="BeginningBalance" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DaysOutOfStocks" nillable="true" type="tns:ArrayOfDaysOutOfStock" />
+      <xs:element minOccurs="0" name="EndingBalance" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Expiries" nillable="true" type="tns:ArrayOfExpiry" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="LossAdjustment" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmaceuticalId" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityIssued" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityOrdered" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityReceived" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderDetail" nillable="true" type="tns:OrderDetail" />
+  <xs:complexType name="ArrayOfAdjustment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Adjustment" nillable="true" type="tns:Adjustment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustment" nillable="true" type="tns:ArrayOfAdjustment" />
+  <xs:complexType name="Adjustment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ReasonId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Adjustment" nillable="true" type="tns:Adjustment" />
+  <xs:complexType name="ArrayOfDaysOutOfStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DaysOutOfStock" nillable="true" type="tns:DaysOutOfStock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDaysOutOfStock" nillable="true" type="tns:ArrayOfDaysOutOfStock" />
+  <xs:complexType name="DaysOutOfStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfDaysOutOfStock" type="xs:int" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockOutReasonId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DaysOutOfStock" nillable="true" type="tns:DaysOutOfStock" />
+  <xs:complexType name="ArrayOfExpiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Expiry" nillable="true" type="tns:Expiry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpiry" nillable="true" type="tns:ArrayOfExpiry" />
+  <xs:complexType name="Expiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="BatchNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Expiry" nillable="true" type="tns:Expiry" />
+  <xs:complexType name="ArrayOfSubmitResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubmitResult" nillable="true" type="tns:SubmitResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubmitResult" nillable="true" type="tns:ArrayOfSubmitResult" />
+  <xs:complexType name="SubmitResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderIsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidationMessages" nillable="true" type="tns:ArrayOfValidationMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubmitResult" nillable="true" type="tns:SubmitResult" />
+  <xs:complexType name="ArrayOfValidationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationMessage" nillable="true" type="tns:ValidationMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationMessage" nillable="true" type="tns:ArrayOfValidationMessage" />
+  <xs:complexType name="ValidationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationMessage" nillable="true" type="tns:ValidationMessage" />
+  <xs:complexType name="PLITSFaultException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorcode" type="tns:PLITSFaultCode" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PLITSFaultException" nillable="true" type="tns:PLITSFaultException" />
+  <xs:simpleType name="PLITSFaultCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OPERATION_ERROR" />
+      <xs:enumeration value="SECURITY_ERROR" />
+      <xs:enumeration value="INCORRECT_PARAMETER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PLITSFaultCode" nillable="true" type="tns:PLITSFaultCode" />
+  <xs:complexType name="ArrayOfApprovedOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovedOrder" nillable="true" type="tns:ApprovedOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovedOrder" nillable="true" type="tns:ArrayOfApprovedOrder" />
+  <xs:complexType name="ApprovedOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovedOrderDetails" nillable="true" type="tns:ArrayOfApprovedOrderDetail" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SupplyChainUnitId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApprovedOrder" nillable="true" type="tns:ApprovedOrder" />
+  <xs:complexType name="ArrayOfApprovedOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovedOrderDetail" nillable="true" type="tns:ApprovedOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovedOrderDetail" nillable="true" type="tns:ArrayOfApprovedOrderDetail" />
+  <xs:complexType name="ApprovedOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovedQty" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmaceuticalId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApprovedOrderDetail" nillable="true" type="tns:ApprovedOrderDetail" />
+  <xs:complexType name="ArrayOfIssuance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Issuance" nillable="true" type="tns:Issuance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssuance" nillable="true" type="tns:ArrayOfIssuance" />
+  <xs:complexType name="Issuance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovedOrderDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="DateIssued" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityIssued" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Issuance" nillable="true" type="tns:Issuance" />
+</xs:schema>

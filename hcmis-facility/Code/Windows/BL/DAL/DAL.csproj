@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B12B6DD-2142-492F-A990-78F5EB3F840A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Itanium'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Itanium\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\DAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Itanium'">
+    <OutputPath>bin\Itanium\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\DAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyGeneration.dOOdads, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_ItemUnit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ReceiveDocDeleted.cs" />
+    <Compile Include="_DisposalDelete.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_ABC.cs" />
+    <Compile Include="_Balance.cs" />
+    <Compile Include="_Category.cs" />
+    <Compile Include="_Disposal.cs" />
+    <Compile Include="_DisposalReasons.cs" />
+    <Compile Include="_DosageForm.cs" />
+    <Compile Include="_DUsItemList.cs" />
+    <Compile Include="_Exchange.cs" />
+    <Compile Include="_ExchangeType.cs" />
+    <Compile Include="_GeneralInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_HalfPalletLocation.cs" />
+    <Compile Include="_INN.cs" />
+    <Compile Include="_InternalTransfer.cs" />
+    <Compile Include="_IssueDoc.cs" />
+    <Compile Include="_IssueDocDeleted.cs" />
+    <Compile Include="_ItemManufacturer.cs" />
+    <Compile Include="_ItemPrefferedLocation.cs" />
+    <Compile Include="_Items.cs" />
+    <Compile Include="_ItemShelf.cs" />
+    <Compile Include="_ItemSupplier.cs" />
+    <Compile Include="_ItemSupplyCategory.cs" />
+    <Compile Include="_Losses.cs" />
+    <Compile Include="_Manufacturers.cs" />
+    <Compile Include="_Manufactures.cs" />
+    <Compile Include="_Order.cs" />
+    <Compile Include="_OrderDetail.cs" />
+    <Compile Include="_OrderStatus.cs" />
+    <Compile Include="_Pallet.cs" />
+    <Compile Include="_Pallete.cs" />
+    <Compile Include="_PalletLocation.cs" />
+    <Compile Include="_PhysicalStore.cs" />
+    <Compile Include="_PickFace.cs" />
+    <Compile Include="_PickList.cs" />
+    <Compile Include="_PickListDetail.cs" />
+    <Compile Include="_PresentationForm.cs" />
+    <Compile Include="_Product.cs" />
+    <Compile Include="_Products.cs" />
+    <Compile Include="_ProductsCategory.cs" />
+    <Compile Include="_Program.cs" />
+    <Compile Include="_ProgramProduct.cs" />
+    <Compile Include="_Programs.cs" />
+    <Compile Include="_RackStatus.cs" />
+    <Compile Include="_ReceiveDoc.cs" />
+    <Compile Include="_ReceivePallet.cs" />
+    <Compile Include="_ReceivePallete.cs" />
+    <Compile Include="_ReceivingStatus.cs" />
+    <Compile Include="_ReceivingUnits.cs" />
+    <Compile Include="_Region.cs" />
+    <Compile Include="_Route.cs" />
+    <Compile Include="_RRF.cs" />
+    <Compile Include="_RRFDetail.cs" />
+    <Compile Include="_Shelf.cs" />
+    <Compile Include="_ShelfRowColumn.cs" />
+    <Compile Include="_StockoutLog.cs" />
+    <Compile Include="_StorageType.cs" />
+    <Compile Include="_Stores.cs" />
+    <Compile Include="_SubCategory.cs" />
+    <Compile Include="_Supplier.cs" />
+    <Compile Include="_SupplyCategory.cs" />
+    <Compile Include="_Transfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_Type.cs" />
+    <Compile Include="_Unit.cs" />
+    <Compile Include="_User.cs" />
+    <Compile Include="_UserType.cs" />
+    <Compile Include="_VEN.cs" />
+    <Compile Include="_Woreda.cs" />
+    <Compile Include="_YearEnd.cs" />
+    <Compile Include="_Zone.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

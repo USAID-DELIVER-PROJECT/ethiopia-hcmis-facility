@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a191f09-e9e2-438b-98ea-e90da4be9f05" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://213.55.76.188/testservices/Order/ServiceOrder.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceOrder44.xsd" MetadataType="Schema" ID="26a8efe1-325b-4e8b-aabe-2ffc7552dbdd" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceOrder11.disco" MetadataType="Disco" ID="db329b46-aa85-46a6-971f-b13b43cd59a2" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?disco" />
+    <MetadataFile FileName="ServiceOrder45.xsd" MetadataType="Schema" ID="f1c36820-3403-46ce-842f-f47531aafe90" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceOrder11.wsdl" MetadataType="Wsdl" ID="eecc0051-99e6-4fbb-88f0-d44f94bf43af" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?wsdl" />
+    <MetadataFile FileName="ServiceOrder46.xsd" MetadataType="Schema" ID="13df64b6-688a-4cf7-bb08-4acd6eadf71c" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceOrder47.xsd" MetadataType="Schema" ID="fdc7d330-c1fa-457f-b043-710beda8df9d" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceOrder.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

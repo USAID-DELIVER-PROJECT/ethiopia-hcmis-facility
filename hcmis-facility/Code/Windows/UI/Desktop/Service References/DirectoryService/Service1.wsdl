@@ -1,0 +1,2101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ds.pfsa.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://ds.pfsa.org//Models" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ds.pfsa.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ds.pfsa.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://ds.pfsa.org//Models" />
+      <s:element name="GetLastVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastVersionResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetABCs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetABCsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetABCsResult" type="tns:ArrayOfABC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfABC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ABC" nillable="true" type="tns:ABC" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ABC">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="rowguid" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ABCCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SN" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVENs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVENsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVENsResult" type="tns:ArrayOfVEN" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVEN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VEN" nillable="true" type="tns:VEN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VEN">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rowguid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VENCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SN" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCommodityTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommodityTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommodityTypesResult" type="tns:ArrayOfCommodityType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCommodityType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CommodityType" nillable="true" type="tns:CommodityType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommodityType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rowguid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommodityTypeCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SN" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDosageForms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDosageFormsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDosageFormsResult" type="tns:ArrayOfDosageForm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDosageForm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DosageForm" nillable="true" type="tns:DosageForm" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DosageForm">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Form" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rowguid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SN" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetModes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModesResult" type="tns:ArrayOfStoreType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStoreType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StoreType" nillable="true" type="tns:StoreType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StoreType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountsResult" type="tns:ArrayOfStores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStores">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Stores" nillable="true" type="tns:Stores" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Stores">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StoreTypeID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSubAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubAccountsResult" type="tns:ArrayOfSubAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSubAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubAccount" nillable="true" type="tns:SubAccount" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubAccount">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSubSubAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubSubAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubSubAccountsResult" type="tns:ArrayOfSubSubAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSubSubAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubSubAccount" nillable="true" type="tns:SubSubAccount" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubSubAccount">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubAccountID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUnits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitsResult" type="tns:ArrayOfUnitTbl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUnitTbl">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UnitTbl" nillable="true" type="tns:UnitTbl" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UnitTbl">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyPerUnit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rowguid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SN" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPrograms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramsResult" type="tns:ArrayOfProgram" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProgram">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Program" nillable="true" type="tns:Program" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Program">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProgramCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportTypesResult" type="tns:ArrayOfReportTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReportTypes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReportTypes" nillable="true" type="tns:ReportTypes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReportTypes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsResult" type="tns:ArrayOfProduct" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfItems" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailLookup" type="tns:DetailLookup" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConfirmedBy" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConfirmedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsConfirmed" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItems">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Items" nillable="true" type="tns:Items" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Items">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Strength" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DosageFormID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEN" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ABC" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyPerPack" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDL" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pediatric" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IINID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NeedExpiry" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCodeDACA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NearExpiryTrigger" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="StorageTypeID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsStackStored" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WithAccessories" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NeedBatch" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NeedExpiryBatch" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinimumStockOnHand" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaximumStockOnHand" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpiryThresholdFacility" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpiryThresholdBranch" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsKey" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DetailLookup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MasterID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsTypeOf" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetManufacturer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManufacturerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManufacturerResult" type="tns:ArrayOfManufacturer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfManufacturer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Manufacturer" nillable="true" type="tns:Manufacturer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Manufacturer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryOfOrigin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PFSAManufCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSuppliers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSuppliersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSuppliersResult" type="tns:ArrayOfSupplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSupplier">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Supplier" nillable="true" type="tns:Supplier" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Supplier">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactPerson" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemsResult" type="tns:ArrayOfItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugItemsResult" type="tns:ArrayOfItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplyItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplyItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplyItemsResult" type="tns:ArrayOfItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemAccessories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemAccessoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemAccessoriesResult" type="tns:ArrayOfItemAccessories" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemAccessories">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemAccessories" nillable="true" type="tns:ItemAccessories" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemAccessories">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Accessories_Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Qty" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesResult" type="tns:ArrayOfDrugCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDrugCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DrugCategory" nillable="true" type="tns:DrugCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DrugCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Level" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PointsTo" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created_Time" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Created_By" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Updated_By" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDrugCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugCategoryResult" type="tns:ArrayOfDrugCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugSubCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugSubCategoryResult" type="tns:ArrayOfDrugSubCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDrugSubCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DrugSubCategory" nillable="true" type="tns:DrugSubCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DrugSubCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubCategoryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubCategoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSupplyCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplyCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplyCategoriesResult" type="tns:ArrayOfSupplyCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSupplyCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SupplyCategory" nillable="true" type="tns:SupplyCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SupplyCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDrugItemSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugItemSubCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugItemSubCategoryResult" type="tns:ArrayOfDrugItemSubCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDrugItemSubCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DrugItemSubCategory" nillable="true" type="tns:DrugItemSubCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DrugItemSubCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubCategoryID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSubCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemSubCategoryResult" type="tns:ArrayOfItemSubCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemSubCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemSubCategory" nillable="true" type="tns:ItemSubCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemSubCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubCategoryID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemSupplyCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSupplyCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemSupplyCategoriesResult" type="tns:ArrayOfItemSupplyCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemSupplyCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemSupplyCategory" nillable="true" type="tns:ItemSupplyCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemSupplyCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemPrograms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemProgramsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemProgramsResult" type="tns:ArrayOfItemProgram" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemProgram">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemProgram" nillable="true" type="tns:ItemProgram" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemProgram">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProgramID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemUnits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemUnitsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemUnitsResult" type="tns:ArrayOfItemUnit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemUnit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemUnit" nillable="true" type="s2:ItemUnit" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStoreItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStoreItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStoreItemResult" type="tns:ArrayOfStoreItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStoreItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StoreItem" nillable="true" type="tns:StoreItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StoreItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StoreID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UsedInThisStore" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemUnitsWithUnitDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemUnitsWithUnitDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemUnitsWithUnitDetailResult" type="tns:ArrayOfItemUnitWithUnitDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemUnitWithUnitDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemUnitWithUnitDetail" nillable="true" type="tns:ItemUnitWithUnitDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemUnitWithUnitDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:Items" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unit" type="tns:UnitTbl" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyPerUnit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitOfIssueGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitOfIssueID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModefiedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rowguid" nillable="true" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemManufacturers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemManufacturersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemManufacturersResult" type="tns:ArrayOfItemManufacturer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemManufacturer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemManufacturer" nillable="true" type="tns:ItemManufacturer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemManufacturer">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ManufacturerID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PackageLevel" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QuantityPerLevel" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsssuingDefault" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecevingDefault" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxWidth" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxHeight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxLength" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StackHeight" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegacyID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemActivities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemActivitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemActivitiesResult" type="tns:ArrayOfStoreItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitsOfIssue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitsOfIssueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitsOfIssueResult" type="tns:ArrayOfUnitTbl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorageTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastVersion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastDateTime" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorageTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStorageTypesResult" type="tns:ArrayOfStorageType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStorageType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StorageType" nillable="true" type="tns:StorageType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StorageType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StorageTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prefix" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ds.pfsa.org//Models">
+      <s:complexType name="ItemUnit">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyPerUnit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLastVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetLastVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetABCsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetABCs" />
+  </wsdl:message>
+  <wsdl:message name="GetABCsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetABCsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVENsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVENs" />
+  </wsdl:message>
+  <wsdl:message name="GetVENsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVENsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommodityTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommodityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDosageFormsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDosageForms" />
+  </wsdl:message>
+  <wsdl:message name="GetDosageFormsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDosageFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModes" />
+  </wsdl:message>
+  <wsdl:message name="GetModesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetSubAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubSubAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubSubAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetSubSubAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubSubAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnits" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrograms" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetReportTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManufacturerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="GetManufacturerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSuppliersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSuppliers" />
+  </wsdl:message>
+  <wsdl:message name="GetSuppliersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSuppliersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugItems" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplyItems" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplyItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemAccessoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemAccessories" />
+  </wsdl:message>
+  <wsdl:message name="GetItemAccessoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemAccessoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplyCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplyCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplyCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugItemSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugItemSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugItemSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugItemSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSupplyCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemSupplyCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSupplyCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemSupplyCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemProgramsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemPrograms" />
+  </wsdl:message>
+  <wsdl:message name="GetItemProgramsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemProgramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUnitsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemUnits" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUnitsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStoreItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStoreItem" />
+  </wsdl:message>
+  <wsdl:message name="GetStoreItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStoreItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUnitsWithUnitDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemUnitsWithUnitDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetItemUnitsWithUnitDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemUnitsWithUnitDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemManufacturersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemManufacturers" />
+  </wsdl:message>
+  <wsdl:message name="GetItemManufacturersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemManufacturersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemActivitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemActivities" />
+  </wsdl:message>
+  <wsdl:message name="GetItemActivitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitsOfIssueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitsOfIssue" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitsOfIssueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitsOfIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStorageTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStorageTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetLastVersion">
+      <wsdl:input message="tns:GetLastVersionSoapIn" />
+      <wsdl:output message="tns:GetLastVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetABCs">
+      <wsdl:input message="tns:GetABCsSoapIn" />
+      <wsdl:output message="tns:GetABCsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVENs">
+      <wsdl:input message="tns:GetVENsSoapIn" />
+      <wsdl:output message="tns:GetVENsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityTypes">
+      <wsdl:input message="tns:GetCommodityTypesSoapIn" />
+      <wsdl:output message="tns:GetCommodityTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDosageForms">
+      <wsdl:input message="tns:GetDosageFormsSoapIn" />
+      <wsdl:output message="tns:GetDosageFormsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModes">
+      <wsdl:input message="tns:GetModesSoapIn" />
+      <wsdl:output message="tns:GetModesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <wsdl:input message="tns:GetAccountsSoapIn" />
+      <wsdl:output message="tns:GetAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubAccounts">
+      <wsdl:input message="tns:GetSubAccountsSoapIn" />
+      <wsdl:output message="tns:GetSubAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSubAccounts">
+      <wsdl:input message="tns:GetSubSubAccountsSoapIn" />
+      <wsdl:output message="tns:GetSubSubAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnits">
+      <wsdl:input message="tns:GetUnitsSoapIn" />
+      <wsdl:output message="tns:GetUnitsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrograms">
+      <wsdl:input message="tns:GetProgramsSoapIn" />
+      <wsdl:output message="tns:GetProgramsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportTypes">
+      <wsdl:input message="tns:GetReportTypesSoapIn" />
+      <wsdl:output message="tns:GetReportTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input message="tns:GetProductsSoapIn" />
+      <wsdl:output message="tns:GetProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturer">
+      <wsdl:input message="tns:GetManufacturerSoapIn" />
+      <wsdl:output message="tns:GetManufacturerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppliers">
+      <wsdl:input message="tns:GetSuppliersSoapIn" />
+      <wsdl:output message="tns:GetSuppliersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <wsdl:input message="tns:GetItemsSoapIn" />
+      <wsdl:output message="tns:GetItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItems">
+      <wsdl:input message="tns:GetDrugItemsSoapIn" />
+      <wsdl:output message="tns:GetDrugItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyItems">
+      <wsdl:input message="tns:GetSupplyItemsSoapIn" />
+      <wsdl:output message="tns:GetSupplyItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemAccessories">
+      <wsdl:input message="tns:GetItemAccessoriesSoapIn" />
+      <wsdl:output message="tns:GetItemAccessoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugCategory">
+      <wsdl:input message="tns:GetDrugCategorySoapIn" />
+      <wsdl:output message="tns:GetDrugCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugSubCategory">
+      <wsdl:input message="tns:GetDrugSubCategorySoapIn" />
+      <wsdl:output message="tns:GetDrugSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyCategories">
+      <wsdl:input message="tns:GetSupplyCategoriesSoapIn" />
+      <wsdl:output message="tns:GetSupplyCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItemSubCategory">
+      <wsdl:input message="tns:GetDrugItemSubCategorySoapIn" />
+      <wsdl:output message="tns:GetDrugItemSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSubCategory">
+      <wsdl:input message="tns:GetItemSubCategorySoapIn" />
+      <wsdl:output message="tns:GetItemSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSupplyCategories">
+      <wsdl:input message="tns:GetItemSupplyCategoriesSoapIn" />
+      <wsdl:output message="tns:GetItemSupplyCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrograms">
+      <wsdl:input message="tns:GetItemProgramsSoapIn" />
+      <wsdl:output message="tns:GetItemProgramsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnits">
+      <wsdl:input message="tns:GetItemUnitsSoapIn" />
+      <wsdl:output message="tns:GetItemUnitsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreItem">
+      <wsdl:input message="tns:GetStoreItemSoapIn" />
+      <wsdl:output message="tns:GetStoreItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnitsWithUnitDetail">
+      <wsdl:input message="tns:GetItemUnitsWithUnitDetailSoapIn" />
+      <wsdl:output message="tns:GetItemUnitsWithUnitDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemManufacturers">
+      <wsdl:input message="tns:GetItemManufacturersSoapIn" />
+      <wsdl:output message="tns:GetItemManufacturersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemActivities">
+      <wsdl:input message="tns:GetItemActivitiesSoapIn" />
+      <wsdl:output message="tns:GetItemActivitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitsOfIssue">
+      <wsdl:input message="tns:GetUnitsOfIssueSoapIn" />
+      <wsdl:output message="tns:GetUnitsOfIssueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageTypes">
+      <wsdl:input message="tns:GetStorageTypesSoapIn" />
+      <wsdl:output message="tns:GetStorageTypesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastVersion">
+      <soap:operation soapAction="http://ds.pfsa.org/GetLastVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetABCs">
+      <soap:operation soapAction="http://ds.pfsa.org/GetABCs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVENs">
+      <soap:operation soapAction="http://ds.pfsa.org/GetVENs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityTypes">
+      <soap:operation soapAction="http://ds.pfsa.org/GetCommodityTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDosageForms">
+      <soap:operation soapAction="http://ds.pfsa.org/GetDosageForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModes">
+      <soap:operation soapAction="http://ds.pfsa.org/GetModes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <soap:operation soapAction="http://ds.pfsa.org/GetAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubAccounts">
+      <soap:operation soapAction="http://ds.pfsa.org/GetSubAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSubAccounts">
+      <soap:operation soapAction="http://ds.pfsa.org/GetSubSubAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnits">
+      <soap:operation soapAction="http://ds.pfsa.org/GetUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrograms">
+      <soap:operation soapAction="http://ds.pfsa.org/GetPrograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportTypes">
+      <soap:operation soapAction="http://ds.pfsa.org/GetReportTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://ds.pfsa.org/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturer">
+      <soap:operation soapAction="http://ds.pfsa.org/GetManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppliers">
+      <soap:operation soapAction="http://ds.pfsa.org/GetSuppliers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItems">
+      <soap:operation soapAction="http://ds.pfsa.org/GetDrugItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyItems">
+      <soap:operation soapAction="http://ds.pfsa.org/GetSupplyItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemAccessories">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemAccessories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://ds.pfsa.org/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugCategory">
+      <soap:operation soapAction="http://ds.pfsa.org/GetDrugCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugSubCategory">
+      <soap:operation soapAction="http://ds.pfsa.org/GetDrugSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyCategories">
+      <soap:operation soapAction="http://ds.pfsa.org/GetSupplyCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItemSubCategory">
+      <soap:operation soapAction="http://ds.pfsa.org/GetDrugItemSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSubCategory">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSupplyCategories">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemSupplyCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrograms">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemPrograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnits">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreItem">
+      <soap:operation soapAction="http://ds.pfsa.org/GetStoreItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnitsWithUnitDetail">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemUnitsWithUnitDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemManufacturers">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemManufacturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemActivities">
+      <soap:operation soapAction="http://ds.pfsa.org/GetItemActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitsOfIssue">
+      <soap:operation soapAction="http://ds.pfsa.org/GetUnitsOfIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageTypes">
+      <soap:operation soapAction="http://ds.pfsa.org/GetStorageTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastVersion">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetLastVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetABCs">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetABCs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVENs">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetVENs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityTypes">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetCommodityTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDosageForms">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetDosageForms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModes">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetModes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubAccounts">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetSubAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSubAccounts">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetSubSubAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnits">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetUnits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrograms">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetPrograms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportTypes">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetReportTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturer">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetManufacturer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppliers">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetSuppliers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItems">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetDrugItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyItems">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetSupplyItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemAccessories">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemAccessories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugCategory">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetDrugCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugSubCategory">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetDrugSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplyCategories">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetSupplyCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugItemSubCategory">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetDrugItemSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSubCategory">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSupplyCategories">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemSupplyCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrograms">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemPrograms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnits">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemUnits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreItem">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetStoreItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemUnitsWithUnitDetail">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemUnitsWithUnitDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemManufacturers">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemManufacturers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemActivities">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetItemActivities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitsOfIssue">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetUnitsOfIssue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageTypes">
+      <soap12:operation soapAction="http://ds.pfsa.org/GetStorageTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://pds.hcmisonline.org/PDSService/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://pds.hcmisonline.org/PDSService/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

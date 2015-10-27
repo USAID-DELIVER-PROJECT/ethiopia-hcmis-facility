@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2c59dca-3d40-4228-acd8-e99ba3a837e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://213.55.76.188/testservices/Order/ServiceRRFLookup.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceRRFLookup11.wsdl" MetadataType="Wsdl" ID="9b5dc20d-27b3-4247-8d2f-e3343c8212e9" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?wsdl" />
+    <MetadataFile FileName="ServiceRRFLookup33.xsd" MetadataType="Schema" ID="8e3804ec-d2be-47fb-8cdb-9811efbc4fb5" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceRRFLookup34.xsd" MetadataType="Schema" ID="e3358db8-41c2-4a15-bb2f-d773dc2bad47" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceRRFLookup11.disco" MetadataType="Disco" ID="0139f13f-6893-41c2-b4cd-cb817930eda6" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?disco" />
+    <MetadataFile FileName="ServiceRRFLookup35.xsd" MetadataType="Schema" ID="2321fe2f-963f-426e-9cd0-c678fd79c6ba" SourceId="1" SourceUrl="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

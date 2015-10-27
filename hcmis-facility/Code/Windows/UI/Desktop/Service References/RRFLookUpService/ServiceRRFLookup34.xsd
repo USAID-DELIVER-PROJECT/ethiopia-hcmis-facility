@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://213.55.76.188/TestServices/Order/ServiceRRFLookup.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLITS.Entities" />
+  <xs:element name="GetForms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Supplychainunitid" type="xs:int" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetFormsResult" nillable="true" type="q1:ArrayOfFormMeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentReportingPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Supplychainunitid" type="xs:int" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentReportingPeriodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetCurrentReportingPeriodResult" nillable="true" type="q2:ArrayOfRRReportingPeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetAdjustmentReasonsResult" nillable="true" type="q3:ArrayOfAdjustmentReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetAdjustmentTypesResult" nillable="true" type="q4:ArrayOfAdjustmentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockOutReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockOutReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetStockOutReasonsResult" nillable="true" type="q5:ArrayOfStockOutReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRRFTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRRFTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetRRFTypesResult" nillable="true" type="q6:ArrayOfRRFType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFacilityRRForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Supplychainunitid" type="xs:int" />
+        <xs:element minOccurs="0" name="Formid" type="xs:int" />
+        <xs:element minOccurs="0" name="Reportingperiodid" type="xs:int" />
+        <xs:element minOccurs="0" name="Ordertype" type="xs:int" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFacilityRRFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetFacilityRRFormResult" nillable="true" type="q7:ArrayOfRRForm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchRRForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Supplychainunitid" type="xs:int" />
+        <xs:element minOccurs="0" name="Formid" type="xs:int" />
+        <xs:element minOccurs="0" name="Reportingperiodid" type="xs:int" />
+        <xs:element minOccurs="0" name="Ordertype" type="xs:int" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchRRFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PLITS.Entities" minOccurs="0" name="GetBranchRRFormResult" nillable="true" type="q8:ArrayOfRRForm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

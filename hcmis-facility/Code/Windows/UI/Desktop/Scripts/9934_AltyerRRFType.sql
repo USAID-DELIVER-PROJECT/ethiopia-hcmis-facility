@@ -1,0 +1,4 @@
+DROP INDEX [IX_UniqueReportingPeriods] ON [dbo].[RRF]
+ALTER TABLE dbo.RRF
+ALTER COLUMN RRFType INT NOT NULL
+

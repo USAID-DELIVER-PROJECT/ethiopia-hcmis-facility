@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockCode" msprop:Generator_ColumnVarNameInTable="columnStockCode" msprop:Generator_ColumnPropNameInRow="StockCode" msprop:Generator_ColumnPropNameInTable="StockCodeColumn" msprop:Generator_UserColumnName="StockCode" type="xs:string" minOccurs="0" />
+              <xs:element name="FullItemName" msprop:Generator_ColumnVarNameInTable="columnFullItemName" msprop:Generator_ColumnPropNameInRow="FullItemName" msprop:Generator_ColumnPropNameInTable="FullItemNameColumn" msprop:Generator_UserColumnName="FullItemName" type="xs:string" minOccurs="0" />
+              <xs:element name="BeginingBalance" msprop:Generator_ColumnVarNameInTable="columnBeginingBalance" msprop:Generator_ColumnPropNameInRow="BeginingBalance" msprop:Generator_ColumnPropNameInTable="BeginingBalanceColumn" msprop:Generator_UserColumnName="BeginingBalance" type="xs:string" minOccurs="0" />
+              <xs:element name="SOH" msprop:Generator_ColumnVarNameInTable="columnSOH" msprop:Generator_ColumnPropNameInRow="SOH" msprop:Generator_ColumnPropNameInTable="SOHColumn" msprop:Generator_UserColumnName="SOH" type="xs:int" minOccurs="0" />
+              <xs:element name="Issued" msprop:Generator_ColumnVarNameInTable="columnIssued" msprop:Generator_ColumnPropNameInRow="Issued" msprop:Generator_ColumnPropNameInTable="IssuedColumn" msprop:Generator_UserColumnName="Issued" type="xs:string" minOccurs="0" />
+              <xs:element name="Received" msprop:Generator_ColumnVarNameInTable="columnReceived" msprop:Generator_ColumnPropNameInRow="Received" msprop:Generator_ColumnPropNameInTable="ReceivedColumn" msprop:Generator_UserColumnName="Received" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
+              <xs:element name="Max" msprop:Generator_ColumnVarNameInTable="columnMax" msprop:Generator_ColumnPropNameInRow="Max" msprop:Generator_ColumnPropNameInTable="MaxColumn" msprop:Generator_UserColumnName="Max" type="xs:string" minOccurs="0" />
+              <xs:element name="LossAdj" msprop:Generator_ColumnVarNameInTable="columnLossAdj" msprop:Generator_ColumnPropNameInRow="LossAdj" msprop:Generator_ColumnPropNameInTable="LossAdjColumn" msprop:Generator_UserColumnName="LossAdj" type="xs:string" minOccurs="0" />
+              <xs:element name="DaysOutOfStock" msprop:Generator_ColumnVarNameInTable="columnDaysOutOfStock" msprop:Generator_ColumnPropNameInRow="DaysOutOfStock" msprop:Generator_ColumnPropNameInTable="DaysOutOfStockColumn" msprop:Generator_UserColumnName="DaysOutOfStock" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxStockQty" msprop:Generator_ColumnVarNameInTable="columnMaxStockQty" msprop:Generator_ColumnPropNameInRow="MaxStockQty" msprop:Generator_ColumnPropNameInTable="MaxStockQtyColumn" msprop:Generator_UserColumnName="MaxStockQty" type="xs:int" minOccurs="0" />
+              <xs:element name="StockCodeDACA" msprop:Generator_ColumnVarNameInTable="columnStockCodeDACA" msprop:Generator_ColumnPropNameInRow="StockCodeDACA" msprop:Generator_ColumnPropNameInTable="StockCodeDACAColumn" msprop:Generator_UserColumnName="StockCodeDACA" type="xs:string" minOccurs="0" />
+              <xs:element name="QtyPerPack" msprop:Generator_ColumnVarNameInTable="columnQtyPerPack" msprop:Generator_ColumnPropNameInRow="QtyPerPack" msprop:Generator_ColumnPropNameInTable="QtyPerPackColumn" msprop:Generator_UserColumnName="QtyPerPack" type="xs:string" minOccurs="0" />
+              <xs:element name="Expired" msprop:Generator_ColumnVarNameInTable="columnExpired" msprop:Generator_ColumnPropNameInRow="Expired" msprop:Generator_ColumnPropNameInTable="ExpiredColumn" msprop:Generator_UserColumnName="Expired" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

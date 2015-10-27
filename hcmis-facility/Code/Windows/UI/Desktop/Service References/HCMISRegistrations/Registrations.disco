@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://registrations.hcmis.org/Registrations.asmx?wsdl" docRef="http://registrations.hcmis.org/Registrations.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://registrations.hcmis.org/Registrations.asmx" xmlns:q1="http://hcmis.org/registrations/" binding="q1:RegistrationsSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://registrations.hcmis.org/Registrations.asmx" xmlns:q2="http://hcmis.org/registrations/" binding="q2:RegistrationsSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
